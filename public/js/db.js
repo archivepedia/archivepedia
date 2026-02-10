@@ -2,7 +2,7 @@ async function loadDB() {
     const panels = document.querySelector('.boxes');
 
     try {
-        const response = await fetch('/db/db.archivepedia');
+        const response = await fetch('./db/db.archivepedia');
         if (!response.ok) throw new Error("Failed to fetch DB file");
 
         const text = await response.text();
